@@ -2,6 +2,15 @@
 #### Name: Ikechukwu Michael, Email: mikeikechi3@gmail.com
 ## Introduction🖖
 
+This project simulates a financial application with the following functionalities:
+
+- **User Registration and Login**: Users can sign up using their email and password, and upon successful registration, they are automatically assigned an account. They can log in using a username and password.
+- **Money Transfer**: Users can transfer money between accounts, irrespective of the currencies involved.
+- **Account Management**: Users can view their account balance and transaction history.
+- **Bill Management**: Users can retrieve lists of bill categories, billers for a specific category, and products associated with particular billers.
+
+**Note**: This project is a simulation and does not utilize live data from third-party payment processors.
+
 ### Specification
 
 - Users are able to sign up using their email and password.
