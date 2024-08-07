@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss} [%thread] %highlight(%-5level) %cyan(%logger{10}) : %msg%n"
+
+# JWT Properties 5
+jwt:
+  secret: foobar_123456789_foobar_123456789_foobar_123456789_foobar_123456789
+  expiration-time-minutes: 21600
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/financialRecords?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password:
+  # JPA Configuration
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    show-sql: false
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  packages-to-scan:
+    - com.example.controller
